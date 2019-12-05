@@ -27,8 +27,16 @@ public class MainActivity extends AppCompatActivity {
 
                 getUname = e1.getText().toString();
                 getPassword = e2.getText().toString();
-                Toast.makeText(getApplicationContext(), getUname+" "+getPassword, Toast.LENGTH_LONG).show();
+                
+                if(getPassword.equals("12345")&&getUname.equals("arun"))
+                {
+                    Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_LONG).show();
+            }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"retry",Toast.LENGTH_LONG).show();
 
+                }
             }
         });
     }
