@@ -10,21 +10,28 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText e1,e2;
+    EditText e1, e2;
     Button b1;
+    String getUname, getPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        e1=(EditText)findViewById(R.id.userid);
-        e2=(EditText)findViewById(R.id.password);
-        b1=(Button)findViewById(R.id.btnid);
+        e1 = (EditText) findViewById(R.id.userid);
+        e2 = (EditText) findViewById(R.id.password);
+        b1 = (Button) findViewById(R.id.btnid);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_LONG).show();
+
+                getUname = e1.getText().toString();
+                getPassword = e2.getText().toString();
+                Toast.makeText(getApplicationContext(), getUname+" "+getPassword, Toast.LENGTH_LONG).show();
+
             }
         });
     }
 }
+
+
